@@ -21,16 +21,24 @@ public class CidadeServlet extends HttpServlet {
         saida.println
                 ("<!DOCTYPE html>" +
                         "<html>" +
-                            "<body>" +
-                                "<h2>Cidades do Banco de Dados</h2>" +
-                                "<ul>");
+                            "<head>" +
+                                "<title>Consulta Cidades</title>" +
+                                "<style>html * {" +
+                                "   font-size: 1.25em !important;" +
+                                "   font-family: 'Courier New', sans-serif;" +
+                                "}" +
+                                "</style>" +
+                            "</head>" +
+                                "<body>" +
+                                    "<h2>Cidades do Banco de Dados</h2>" +
+                                    "<ul>");
 
         for (Cidade c : banco.listarCidade()) {
             saida.println
-                                    ("<li>"+ c.getNome() + " - " + c.getEstado().getSigla()+ "</li>");
+                                        ("<li>"+ c.getNome() + " - " + c.getEstado().getSigla()+ "</li>");
         }
 
-        saida.println(          "</ul>" +
+        saida.println(              "</ul>" +
                             "</body>" +
                         "</html>");
     }
