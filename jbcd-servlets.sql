@@ -21,3 +21,6 @@ values ('Amazonas', 'AM'), ('Pará', 'PA');
 insert into cidade (nome, id_estado) 
 values ('Manaus', 1), ('Manacapuru', 1), ('Parintins', 1),
 		('Belém', 2), ('Santarém', 2);
+        
+insert into cidade (nome, id_estado)
+values ('Presidente Figueiredo', 1);
